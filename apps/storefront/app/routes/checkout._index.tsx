@@ -30,6 +30,7 @@ const fetchShippingOptions = async (cartId: string) => {
 };
 
 const findCheapestShippingOption = (shippingOptions: StoreCartShippingOption[]) => {
+  console.log(shippingOptions)
   return shippingOptions.reduce((cheapest, current) => {
     return cheapest.amount <= current.amount ? cheapest : current;
   });
@@ -88,7 +89,7 @@ export const loader = async ({
   activePaymentSession: BasePaymentSession | null;
 }> => {
   const cartId = await getCartId(request.headers);
-
+  console.log(cartId)
   if (!cartId) {
     return {
       cart: null,

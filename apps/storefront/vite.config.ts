@@ -11,10 +11,11 @@ declare module '@remix-run/server-runtime' {
 
 export default defineConfig({
   server: {
-    port: 3000,
+    port: 3001,
     warmup: {
       clientFiles: ['./app/entry.client.tsx', './app/root.tsx', './app/routes/**/*'],
     },
+    allowedHosts: ['https://947d-2806-101e-a-13df-8c92-69af-9c03-ab8a.ngrok-free.app']
   },
   ssr: {
     noExternal: ['@medusajs/js-sdk'],

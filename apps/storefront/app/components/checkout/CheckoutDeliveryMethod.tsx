@@ -91,7 +91,7 @@ export const CheckoutDeliveryMethod: FC = () => {
   return (
     <div className="checkout-delivery-method">
       <CheckoutSectionHeader completed={showCompleted} setStep={setStep} step={CheckoutStep.PAYMENT}>
-        Delivery & Payment
+        Click And Collect
       </CheckoutSectionHeader>
 
       {!isActiveStep && (
