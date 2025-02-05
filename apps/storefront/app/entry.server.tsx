@@ -20,7 +20,7 @@ const ABORT_DELAY = 5000;
 export default function handleRequest(
   ...props: [request: Request, responseStatusCode: number, responseHeaders: Headers, remixContext: EntryContext]
 ) {
-  return isbot(props[0].headers.get('user-agent')) ? handleBotRequest(...props) : handleBrowserRequest(...props);
+  return handleBrowserRequest(...props);
 }
 
 function handleBotRequest(
