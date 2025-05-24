@@ -60,7 +60,7 @@ jobs:
           DOCKER_TAG: ${{ github.sha }}
 
       - name: Helm Update
-        uses: WyriHaximus/github-action-helm3@v2
+        uses: WyriHaximus/github-action-helm3@v3
         env:
           HELM_NAME: storefront
           KUBE_NAMESPACE: barrio
