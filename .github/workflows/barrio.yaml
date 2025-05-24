@@ -103,7 +103,7 @@ jobs:
         uses: ./.github/composite/docker/medusa
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          DOCKER_REPOSITORY: gcr.io/resume-50614/github.com/JesusFregoso/ricos
+          DOCKER_REPOSITORY: ghcr.io/jesusfregoso/ricos/medusa
           DOCKER_TAG: ${{ github.sha }}
 
       - name: Helm Update
@@ -112,7 +112,7 @@ jobs:
           HELM_NAME: medusa
           KUBE_NAMESPACE: barrio
           DOCKER_TAG: ${{ github.sha }}
-          DOCKER_REPOSITORY: gcr.io/resume-50614/github.com/JesusFregoso/ricos
+          DOCKER_REPOSITORY: ghcr.io/jesusfregoso/ricos/medusa
         with:
           exec: |
             helm upgrade ${HELM_NAME} --reuse-values \
