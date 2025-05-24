@@ -1,9 +1,9 @@
 version: '3'
-name: medusa2-starter
+name: ricos
 services:
   db:
     image: postgres:16
-    container_name: medusa2-starter-postgres
+    container_name: ricos-postgres
     volumes:
       - database:/var/lib/postgresql/data
     ports:
